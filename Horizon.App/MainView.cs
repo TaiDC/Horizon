@@ -46,7 +46,7 @@ namespace Horizon.App
 
             InitializeComponent();
 
-            #region InitializeButton
+            #region Initialize Button
 
             barButtonNhanVien.ItemClick += delegate { ShowUserControl(barButtonNhanVien.Caption, typeof(NhanVienView)); };
             barButtonNhaCungCap.ItemClick += delegate { ShowUserControl(barButtonNhaCungCap.Caption, typeof(NhaCungCapView)); };
@@ -67,6 +67,10 @@ namespace Horizon.App
             barButtonHome.ItemClick += delegate { };
             #endregion
 
+
+            #region Initialize Button Report
+            btnBC_001_NhapXuatTon.ItemClick += delegate { _vm.BC_001_NhapXuatTon((DateTime)barEditTuNgay.EditValue, (DateTime)barEditDenNgay.EditValue); };
+            #endregion
             barEditTuNgay.EditValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             barEditDenNgay.EditValue = DateTime.Today;
 

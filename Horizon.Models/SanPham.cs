@@ -17,7 +17,7 @@ namespace Horizon.Models
         [Display(Name = "Số Sản Phẩm")]
         public string SoSanPham { get => soSanPham; set => Set(ref soSanPham, value); }
         [Display(Name = "Chứng Từ")]
-        public ChungTu ChungTu { get => chungTu; set => Set(ref chungTu, value); }
+        public virtual ChungTu ChungTu { get => chungTu; set => Set(ref chungTu, value); }
         [Display(Name = "Loại Sản Phẩm")]
         public virtual LoaiSanPham LoaiSanPham { get => loaiSanPham; set => Set(ref loaiSanPham, value); }
         [Display(Name = "Đơn Giá Nhập")]

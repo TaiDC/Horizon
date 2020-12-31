@@ -37,7 +37,7 @@ namespace Horizon.Models
         [Display(Name = "Thành Tiền")]
         public double ThanhTien { get => thanhTien; set => Set(ref thanhTien, value); }
         [Display(Name = "Nhân Viên Xuất")]
-        public NhanVien NguoiXuat { get => nguoiXuat; set => Set(ref nguoiXuat, value); }
+        public virtual NhanVien NguoiXuat { get => nguoiXuat; set => Set(ref nguoiXuat, value); }
         [Display(Name = "Tình Trạng")]
         public virtual DanhMuc TinhTrang { get => tinhTrang; set => Set(ref tinhTrang, value); }
         [Display(Name = "Hủy")]
@@ -45,9 +45,9 @@ namespace Horizon.Models
         [Display(Name = "Hoàn Trả")]
         public bool HoanTraHoaDon { get => hoanTraHoaDon; set => Set(ref hoanTraHoaDon, value); }
         [Display(Name = "Hình Thức Thanh Toán")]
-        public DanhMuc HinhThucThanhToan { get => hinhThucThanhToan; set => Set(ref hinhThucThanhToan, value); }
+        public virtual DanhMuc HinhThucThanhToan { get => hinhThucThanhToan; set => Set(ref hinhThucThanhToan, value); }
         [Display(Name = "Đơn Vị Vận Chuyển")]
-        public DonViVanChuyen DonViVanChuyen { get => donViVanChuyen; set => Set(ref donViVanChuyen, value); }
+        public virtual DonViVanChuyen DonViVanChuyen { get => donViVanChuyen; set => Set(ref donViVanChuyen, value); }
         [Display(Name = "Khách Hàng")]
         public virtual KhachHang KhachHang { get => khachHang; set => Set(ref khachHang, value); }
         [Display(Name = "Ghi Chú")]

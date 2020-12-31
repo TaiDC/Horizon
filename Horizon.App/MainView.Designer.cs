@@ -64,6 +64,9 @@
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.ribbonPageGroup10 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.btnBC_001_NhapXuatTon = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBC_002_TheKho = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
@@ -97,9 +100,11 @@
             this.barEditDenNgay,
             this.barButtonHome,
             this.barButtonDesign,
-            this.barButtonBarcode});
+            this.barButtonBarcode,
+            this.btnBC_001_NhapXuatTon,
+            this.btnBC_002_TheKho});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 18;
+            this.ribbon.MaxItemId = 20;
             this.ribbon.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -228,13 +233,14 @@
             // 
             this.barButtonBarcode.Caption = "Barcode Sản Phẩm";
             this.barButtonBarcode.Id = 17;
-            this.barButtonBarcode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonBarcode.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonBarcode.ImageOptions.SvgImage")));
             this.barButtonBarcode.Name = "barButtonBarcode";
             // 
             // ribbonPageHome
             // 
             this.ribbonPageHome.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup1,
+            this.ribbonPageGroup10,
             this.ribbonPageGroup7});
             this.ribbonPageHome.Name = "ribbonPageHome";
             this.ribbonPageHome.Text = "HOME";
@@ -360,6 +366,27 @@
             // 
             this.tabbedView.DocumentGroupProperties.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InTabControlHeader;
             // 
+            // ribbonPageGroup10
+            // 
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnBC_001_NhapXuatTon);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnBC_002_TheKho);
+            this.ribbonPageGroup10.Name = "ribbonPageGroup10";
+            this.ribbonPageGroup10.Text = "Báo Cáo";
+            // 
+            // btnBC_001_NhapXuatTon
+            // 
+            this.btnBC_001_NhapXuatTon.Caption = "Nhập Xuất Tồn";
+            this.btnBC_001_NhapXuatTon.Id = 18;
+            this.btnBC_001_NhapXuatTon.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBC_001_NhapXuatTon.ImageOptions.SvgImage")));
+            this.btnBC_001_NhapXuatTon.Name = "btnBC_001_NhapXuatTon";
+            // 
+            // btnBC_002_TheKho
+            // 
+            this.btnBC_002_TheKho.Caption = "Thẻ Kho";
+            this.btnBC_002_TheKho.Id = 19;
+            this.btnBC_002_TheKho.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBC_002_TheKho.ImageOptions.SvgImage")));
+            this.btnBC_002_TheKho.Name = "btnBC_002_TheKho";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,5 +451,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem barButtonBarcode;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem btnBC_001_NhapXuatTon;
+        private DevExpress.XtraBars.BarButtonItem btnBC_002_TheKho;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
     }
 }

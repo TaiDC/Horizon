@@ -11,5 +11,7 @@ namespace Horizon.Interfaces.ViewModels
     public interface IMainViewModel
     {
         void Load();
+        void BC_001_NhapXuatTon(DateTime tungay, DateTime denngay);
+        void BC_002_TheKho(DateTime tungay, DateTime denngay);
     }
 }

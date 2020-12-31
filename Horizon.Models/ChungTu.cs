@@ -38,9 +38,9 @@ namespace Horizon.Models
         [Display(Name = "Tổng Tiền")]
         public double TongTien { get => tongTien; set => Set(ref tongTien, value); }
         [Display(Name = "Người Nhập")]
-        public NhanVien NguoiNhap { get => nguoiNhap; set => Set(ref nguoiNhap, value); }
+        public virtual NhanVien NguoiNhap { get => nguoiNhap; set => Set(ref nguoiNhap, value); }
         [Display(Name = "Nhà Cung Cấp")]
-        public NhaCungCap NhaCungCap { get => nhaCungCap; set => Set(ref nhaCungCap, value); }
+        public virtual NhaCungCap NhaCungCap { get => nhaCungCap; set => Set(ref nhaCungCap, value); }
 
         public virtual ICollection<SanPham> ChungTuChiTiet { get; set; }
 
