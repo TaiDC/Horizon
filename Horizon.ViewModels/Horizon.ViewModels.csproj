@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C780E5FA-0012-4C9F-9DC7-FE5C788C295A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Horizon.ViewModels</RootNamespace>
+    <AssemblyName>Horizon.ViewModels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BarcodeViewModel.cs" />
+    <Compile Include="BaseDictionaryViewModel.cs" />
+    <Compile Include="ChungTuViewModel.cs" />
+    <Compile Include="DanhMucViewModel.cs" />
+    <Compile Include="DonViVanChuyenViewModel.cs" />
+    <Compile Include="HoaDonViewModel.cs" />
+    <Compile Include="KhachHangViewModel.cs" />
+    <Compile Include="LoaiSanPhamViewModel.cs" />
+    <Compile Include="MainViewModel.cs" />
+    <Compile Include="NhaCungCapViewModel.cs" />
+    <Compile Include="NhanVienViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Horizon.AppHelper\Horizon.AppHelper.csproj">
+      <Project>{04cac385-fb30-49fc-8b6f-6eaeb1a62018}</Project>
+      <Name>Horizon.AppHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horizon.DataAccess\Horizon.DataAccess.csproj">
+      <Project>{c7366e1e-2060-4ee7-8ad0-61077701c904}</Project>
+      <Name>Horizon.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horizon.Framework\Horizon.Framework.csproj">
+      <Project>{d9e9ac2e-287b-4cf4-8508-63baef832a45}</Project>
+      <Name>Horizon.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horizon.Interfaces\Horizon.Interfaces.csproj">
+      <Project>{e8f95157-76c1-4127-bb0e-3e25ac6cb5e3}</Project>
+      <Name>Horizon.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horizon.Models\Horizon.Models.csproj">
+      <Project>{d46f1e96-42fa-4c97-9a19-5a771aeba93f}</Project>
+      <Name>Horizon.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
