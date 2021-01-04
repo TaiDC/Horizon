@@ -11429,8 +11429,11 @@
 
                 #endregion
 
-                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "CTT", LoaiDanhMuc = "TrangThai", TenDanhMuc = "Chưa Thanh Toán", Idx = 1, TamNgung = false, DateCreate = DateTime.Today });
-                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "HTTT", LoaiDanhMuc = "TrangThai", TenDanhMuc = "Đã Thanh Toán", Idx = 2, TamNgung = false, DateCreate = DateTime.Today });
+                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "CTT", LoaiDanhMuc = "TrangThai", TenDanhMuc = "Chưa thanh toán", Idx = 1, TamNgung = false, DateCreate = DateTime.Today });
+                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "HTTT", LoaiDanhMuc = "TrangThai", TenDanhMuc = "Đã thanh toán", Idx = 2, TamNgung = false, DateCreate = DateTime.Today });
+                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "COD", LoaiDanhMuc = "HinhThucThanhToan", TenDanhMuc = "Ship COD", Idx = 1, TamNgung = false, DateCreate = DateTime.Today });
+                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "TM", LoaiDanhMuc = "HinhThucThanhToan", TenDanhMuc = "Tiền mặt", Idx = 1, TamNgung = false, DateCreate = DateTime.Today });
+                context.DanhMucs.AddOrUpdate(new DanhMuc { MaDanhMuc = "CK", LoaiDanhMuc = "HinhThucThanhToan", TenDanhMuc = "Chuyển khoản", Idx = 1, TamNgung = false, DateCreate = DateTime.Today });
             }
             #endregion
         }

@@ -124,24 +124,11 @@ namespace Horizon.ViewModels
         }
         private void PrintExcute()
         {
-            BindingSource _hoadonsource = new BindingSource();
-            _hoadonsource.DataSource = BindingSource.Current;
-            XtraReport report = XtraReport.FromFile(@"Report\\BC_002_HoaDon.repx", true);
-            report.DataSource = _hoadonsource ;
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PrintDialog();
+            AppHelper.PrintHelper.PrintReport(BindingSource, "BC_002_HoaDon");
         }
         private void ViewExcute()
         {
-            BindingSource _hoadonsource = new BindingSource();
-            _hoadonsource.DataSource = BindingSource.Current;
-            XtraReport report = XtraReport.FromFile(@"Report\\BC_002_HoaDon.repx", true);
-            report.DataSource = _hoadonsource;
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PreviewForm.WindowState = FormWindowState.Maximized;
-            printTool.ShowPreviewDialog();
+            AppHelper.PrintHelper.ViewReport(BindingSource, "BC_002_HoaDon");
         }
         #endregion
 

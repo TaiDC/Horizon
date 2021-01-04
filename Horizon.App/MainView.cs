@@ -70,7 +70,10 @@ namespace Horizon.App
 
             #region Initialize Button Report
             btnBC_001_NhapXuatTon.ItemClick += delegate { _vm.BC_001_NhapXuatTon((DateTime)barEditTuNgay.EditValue, (DateTime)barEditDenNgay.EditValue); };
+            btnBC_002_TheKho.ItemClick += delegate { _vm.BC_002_TheKho((DateTime)barEditTuNgay.EditValue, (DateTime)barEditDenNgay.EditValue); };
             #endregion
+
+
             barEditTuNgay.EditValue = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             barEditDenNgay.EditValue = DateTime.Today;
 

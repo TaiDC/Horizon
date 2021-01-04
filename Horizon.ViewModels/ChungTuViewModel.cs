@@ -220,20 +220,11 @@ namespace Horizon.ViewModels
 
         private void PrintExcute()
         {
-            XtraReport report = XtraReport.FromFile(@"Report\\BC_001_ChungTu.repx", true);
-            report.DataSource = BindingSource;
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PrintDialog();
+            AppHelper.PrintHelper.PrintReport(BindingSource, "BC_001_ChungTu");
         }
         private void ViewExcute()
         {
-            XtraReport report = XtraReport.FromFile(@"Report\\BC_001_ChungTu.repx", true);
-            report.DataSource = BindingSource;
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PreviewForm.WindowState = FormWindowState.Maximized;
-            printTool.ShowPreviewDialog();
+            AppHelper.PrintHelper.ViewReport(BindingSource, "BC_001_ChungTu");
         }
     }
 }
