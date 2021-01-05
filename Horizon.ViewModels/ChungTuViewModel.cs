@@ -144,6 +144,16 @@ namespace Horizon.ViewModels
         public override bool Save()
         {
             var obj = BindingSource.Current as ChungTu;
+            if (obj.NhaCungCap == null)
+            {
+                XtraMessageBox.Show("Bạn phải chọn Nhà cung cấp", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (obj.NguoiNhap == null)
+            {
+                XtraMessageBox.Show("Bạn phải chọn Người nhập", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             if (obj.Id == 0)
                 UnitOfWork.ChungTu.Add(obj);
             else

@@ -196,6 +196,16 @@ namespace Horizon.ViewModels
         {
             var objKH = BindingSourceKhachHang.Current as KhachHang;
             var obj = BindingSource.Current as HoaDon;
+            if(obj.NguoiXuat == null)
+            {
+                XtraMessageBox.Show("Bạn phải chọn người xuất", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            if (obj.DonViVanChuyen == null)
+            {
+                XtraMessageBox.Show("Bạn phải chọn đơn vị vận chuyển", "CẢNH BÁO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             if (objKH.Id == 0)
             {
                 objKH.MaKhachHang = UnitOfWork.KhachHang.InitializationCodeByYear(DateTime.Now);

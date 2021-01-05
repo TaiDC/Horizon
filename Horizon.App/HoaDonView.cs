@@ -32,7 +32,7 @@ namespace Horizon.App
             _vm.DataLayoutControlDetail = dataLayoutDetail;
             _vm.GridControlCollection = new DevExpress.XtraGrid.GridControl();
             _vm.InitializeView();
-            Load += delegate { _vm.Load(); ReadOnlyInfo(_vm.AddCommand.Enabled); };
+            Load += delegate { _vm.Load(); ReadOnlyInfo(_vm.AddCommand.Enabled);};
             #endregion
 
             #region Button Command
@@ -42,7 +42,7 @@ namespace Horizon.App
             btnAdd.ItemClick += delegate {  _vm.AddCommand.Execute(); ReadOnlyInfo(_vm.SaveCommand.Enabled); };
             btnEdit.ItemClick += delegate { ReadOnlyInfo(_vm.AddCommand.Enabled); _vm.EditCommand.Execute(); };
             btnDelete.ItemClick += delegate { _vm.DeleteCommand.Execute(); };
-            btnSave.ItemClick += delegate { _vm.SaveCommand.Execute(); ReadOnlyInfo(_vm.AddCommand.Enabled); };
+            btnSave.ItemClick += delegate {_vm.SaveCommand.Execute(); ReadOnlyInfo(_vm.AddCommand.Enabled); };
             btnTrash.ItemClick += delegate { _vm.TrashCommand.Execute(); ReadOnlyInfo(!_vm.TrashCommand.Enabled); };
             btnPayment.ItemClick += delegate { _vm.PaymentCommand.Execute(); };
             btnCancel.ItemClick += delegate { _vm.CancelCommand.Execute(); };

@@ -34,7 +34,6 @@
             System.Windows.Forms.Label ngaySinhLabel;
             System.Windows.Forms.Label gioiTinhLabel;
             System.Windows.Forms.Label label1;
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoaDonView));
             this.panInfo = new System.Windows.Forms.Panel();
             this.ngaySinhDateEdit = new DevExpress.XtraEditors.DateEdit();
@@ -96,7 +95,6 @@
             this.btnRefund = new DevExpress.XtraBars.BarButtonItem();
             this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
             this.btnFind = new DevExpress.XtraBars.BarButtonItem();
-            this.dxValidationProvider1 = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             maKhachHangLabel = new System.Windows.Forms.Label();
             tenKhachHangLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -150,7 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonChiTietBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMenu
@@ -737,9 +734,11 @@
             // NguoiXuatLookUpEdit
             // 
             this.NguoiXuatLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "NguoiXuat", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NguoiXuatLookUpEdit.EditValue = "<Null>";
             this.NguoiXuatLookUpEdit.Location = new System.Drawing.Point(132, 84);
             this.NguoiXuatLookUpEdit.MenuManager = this.ribbonControlMenu;
             this.NguoiXuatLookUpEdit.Name = "NguoiXuatLookUpEdit";
+            this.NguoiXuatLookUpEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.NguoiXuatLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NguoiXuatLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
@@ -751,10 +750,6 @@
             this.NguoiXuatLookUpEdit.Size = new System.Drawing.Size(218, 20);
             this.NguoiXuatLookUpEdit.StyleController = this.dataLayoutDetail;
             this.NguoiXuatLookUpEdit.TabIndex = 6;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsBlank;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            conditionValidationRule1.ErrorType = DevExpress.XtraEditors.DXErrorProvider.ErrorType.Warning;
-            this.dxValidationProvider1.SetValidationRule(this.NguoiXuatLookUpEdit, conditionValidationRule1);
             // 
             // nhanVienBindingSource
             // 
@@ -976,7 +971,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.simpleLabelItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hoaDonChiTietBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dxValidationProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1044,6 +1038,5 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForGhiChu;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
-        private DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider dxValidationProvider1;
     }
 }

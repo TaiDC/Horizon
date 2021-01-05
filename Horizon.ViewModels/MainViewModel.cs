@@ -36,7 +36,8 @@ namespace Horizon.ViewModels
         public void BC_002_TheKho(DateTime tungay, DateTime denngay)
         {
             var ttdtt = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
-            var query = UnitOfWork.HoaDonChiTiet.GetList(hdct => hdct.HoaDon.HuyHoaDon == false && hdct.HoaDon.HoanTraHoaDon == false && hdct.HoaDon.TinhTrang.Id == ttdtt.Id);
+            var query = UnitOfWork.HoaDonChiTiet.GetList(hdct => hdct.HoaDon.HuyHoaDon == false && hdct.HoaDon.HoanTraHoaDon == false && hdct.HoaDon.TinhTrang.Id == ttdtt.Id
+            && hdct.HoaDon.NgayHoaDon >= tungay && hdct.HoaDon.NgayHoaDon <= denngay);
             XtraReport report = XtraReport.FromFile(@"Report\BC_002_TheKho.repx", true);
             var rb= report.Band.Controls[1].Controls["crosstab"] as XRCrossTab ;
             rb.DataSource = query;
