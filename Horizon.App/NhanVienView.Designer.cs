@@ -33,6 +33,7 @@
             this.colTenNhanVien = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDiaChi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
@@ -50,7 +51,6 @@
             this.DiaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForTamNgung = new DevExpress.XtraLayout.LayoutControlItem();
             this.TamNgungCheckEdit = new DevExpress.XtraEditors.CheckEdit();
-            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutDetail)).BeginInit();
@@ -58,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMaNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaNhanVienTextEdit.Properties)).BeginInit();
@@ -74,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTamNgung)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TamNgungCheckEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMenu
@@ -187,6 +187,16 @@
             this.colGioiTinh.Visible = true;
             this.colGioiTinh.VisibleIndex = 3;
             // 
+            // repositoryItemImageComboBox1
+            // 
+            this.repositoryItemImageComboBox1.AutoHeight = false;
+            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "M", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "F", -1)});
+            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
+            // 
             // colDienThoai
             // 
             this.colDienThoai.FieldName = "DienThoai";
@@ -231,6 +241,7 @@
             this.MaNhanVienTextEdit.Location = new System.Drawing.Point(125, 12);
             this.MaNhanVienTextEdit.MenuManager = this.ribbonControlMenu;
             this.MaNhanVienTextEdit.Name = "MaNhanVienTextEdit";
+            this.MaNhanVienTextEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.MaNhanVienTextEdit.Size = new System.Drawing.Size(163, 20);
             this.MaNhanVienTextEdit.StyleController = this.dataLayoutDetail;
             this.MaNhanVienTextEdit.TabIndex = 4;
@@ -356,16 +367,6 @@
             this.TamNgungCheckEdit.StyleController = this.dataLayoutDetail;
             this.TamNgungCheckEdit.TabIndex = 10;
             // 
-            // repositoryItemImageComboBox1
-            // 
-            this.repositoryItemImageComboBox1.AutoHeight = false;
-            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemImageComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "M", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "F", -1)});
-            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
-            // 
             // NhanVienView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,6 +380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMaNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaNhanVienTextEdit.Properties)).EndInit();
@@ -395,7 +397,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTamNgung)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TamNgungCheckEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

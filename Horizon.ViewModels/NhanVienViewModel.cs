@@ -49,7 +49,7 @@ namespace Horizon.ViewModels
             return base.Save();
         }
         public override bool Trash()
-        {
+        {    
             return base.Trash();
         }
     }

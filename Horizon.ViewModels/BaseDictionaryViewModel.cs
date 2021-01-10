@@ -118,24 +118,51 @@ namespace Horizon.ViewModels
         {
 
         }
+        /// <summary>
+        /// Add New
+        /// </summary>
+        /// <returns>When Excute return False</returns>
         public virtual bool Add()
         {
             return false;
         }
+        /// <summary>
+        /// Edit
+        /// </summary>
+        /// <returns>When Excute return False</returns>
         public virtual bool Edit()
         {
             return false;
         }
+        /// <summary>
+        /// Delete
+        /// </summary>
+        /// <returns>When Excute return True</returns>
         public virtual bool Delete()
         {
             return true;
         }
+        /// <summary>
+        /// Save
+        /// </summary>
+        /// <returns>When Excute return True</returns>
         public virtual bool Save()
         {
             return true;
         }
+
+        /// <summary>
+        /// Trash
+        /// </summary>
+        /// <returns> True</returns>
         public virtual bool Trash()
         {
+            var obj = BindingSource.Current as Models.Common.BaseObject;
+            if (obj == null) return true;
+            if (obj.Id == 0)
+            {
+                BindingSource.RemoveCurrent();
+            }
             return true;
         }
     }

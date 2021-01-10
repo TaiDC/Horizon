@@ -243,8 +243,7 @@ namespace Horizon.ViewModels
                 BindingSourceChiTiet.Clear();
                 BindingSourceChiTiet.DataSource = obj.HoaDonChiTiet.ToList();
             }
-
-            return base.Trash();
+            return true;
         }
 
         public void NewSanPham(object loaiSanPham, object donGia)

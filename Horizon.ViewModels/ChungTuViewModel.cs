@@ -183,7 +183,7 @@ namespace Horizon.ViewModels
                 BindingSource.Add( UnitOfWork.ChungTu.GetById(obj.Id));
                 BindingSourceChiTiet.DataSource = (BindingSource.Current as ChungTu).ChungTuChiTiet.ToList();
             }
-            return base.Trash();
+            return true;
         }
 
         public void NewSanPham(object loaiSanPham, object donGia)

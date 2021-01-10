@@ -221,6 +221,7 @@
             this.dataLayoutDetail.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.dataLayoutDetail.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(951, 244, 650, 400);
             this.dataLayoutDetail.Size = new System.Drawing.Size(830, 180);
+            this.dataLayoutDetail.TabIndex = 1;
             // 
             // layoutControlGroup1
             // 
@@ -234,6 +235,7 @@
             this.gridControlCollection.DataSource = this.hoaDonChiTietBindingSource;
             this.gridControlCollection.Location = new System.Drawing.Point(0, 462);
             this.gridControlCollection.Size = new System.Drawing.Size(830, 122);
+            this.gridControlCollection.TabIndex = 2;
             // 
             // gridViewCollection
             // 
@@ -259,7 +261,7 @@
             maKhachHangLabel.Location = new System.Drawing.Point(10, 14);
             maKhachHangLabel.Name = "maKhachHangLabel";
             maKhachHangLabel.Size = new System.Drawing.Size(37, 13);
-            maKhachHangLabel.TabIndex = 1;
+            maKhachHangLabel.TabIndex = 0;
             maKhachHangLabel.Text = "Mã KH";
             // 
             // tenKhachHangLabel
@@ -268,7 +270,7 @@
             tenKhachHangLabel.Location = new System.Drawing.Point(10, 37);
             tenKhachHangLabel.Name = "tenKhachHangLabel";
             tenKhachHangLabel.Size = new System.Drawing.Size(41, 13);
-            tenKhachHangLabel.TabIndex = 3;
+            tenKhachHangLabel.TabIndex = 2;
             tenKhachHangLabel.Text = "Tên KH";
             // 
             // ngaySinhLabel
@@ -277,7 +279,7 @@
             ngaySinhLabel.Location = new System.Drawing.Point(10, 60);
             ngaySinhLabel.Name = "ngaySinhLabel";
             ngaySinhLabel.Size = new System.Drawing.Size(55, 13);
-            ngaySinhLabel.TabIndex = 5;
+            ngaySinhLabel.TabIndex = 4;
             ngaySinhLabel.Text = "Ngày Sinh";
             // 
             // gioiTinhLabel
@@ -286,7 +288,7 @@
             gioiTinhLabel.Location = new System.Drawing.Point(10, 87);
             gioiTinhLabel.Name = "gioiTinhLabel";
             gioiTinhLabel.Size = new System.Drawing.Size(47, 13);
-            gioiTinhLabel.TabIndex = 7;
+            gioiTinhLabel.TabIndex = 6;
             gioiTinhLabel.Text = "Giới Tính";
             // 
             // label1
@@ -295,7 +297,7 @@
             label1.Location = new System.Drawing.Point(10, 113);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(64, 13);
-            label1.TabIndex = 7;
+            label1.TabIndex = 8;
             label1.Text = "Số Hóa Đơn";
             // 
             // panInfo
@@ -314,7 +316,7 @@
             this.panInfo.Location = new System.Drawing.Point(0, 150);
             this.panInfo.Name = "panInfo";
             this.panInfo.Size = new System.Drawing.Size(830, 132);
-            this.panInfo.TabIndex = 10;
+            this.panInfo.TabIndex = 0;
             // 
             // ngaySinhDateEdit
             // 
@@ -328,7 +330,7 @@
             this.ngaySinhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ngaySinhDateEdit.Size = new System.Drawing.Size(218, 20);
-            this.ngaySinhDateEdit.TabIndex = 6;
+            this.ngaySinhDateEdit.TabIndex = 5;
             // 
             // khachHangBindingSource
             // 
@@ -341,7 +343,7 @@
             this.tenKhachHangTextEdit.MenuManager = this.ribbonControlMenu;
             this.tenKhachHangTextEdit.Name = "tenKhachHangTextEdit";
             this.tenKhachHangTextEdit.Size = new System.Drawing.Size(218, 20);
-            this.tenKhachHangTextEdit.TabIndex = 4;
+            this.tenKhachHangTextEdit.TabIndex = 3;
             // 
             // gioiTinhTextEdit
             // 
@@ -356,7 +358,7 @@
             new DevExpress.XtraEditors.Controls.RadioGroupItem("T", "Nam"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem("G", "Nữ")});
             this.gioiTinhTextEdit.Size = new System.Drawing.Size(161, 27);
-            this.gioiTinhTextEdit.TabIndex = 8;
+            this.gioiTinhTextEdit.TabIndex = 7;
             // 
             // maKhachHangTextEdit
             // 
@@ -368,7 +370,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
             this.maKhachHangTextEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.maKhachHangTextEdit.Size = new System.Drawing.Size(218, 20);
-            this.maKhachHangTextEdit.TabIndex = 2;
+            this.maKhachHangTextEdit.TabIndex = 1;
             // 
             // lookUpHoaDon
             // 
@@ -383,7 +385,7 @@
             this.lookUpHoaDon.Properties.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
             this.lookUpHoaDon.Size = new System.Drawing.Size(218, 20);
-            this.lookUpHoaDon.TabIndex = 0;
+            this.lookUpHoaDon.TabIndex = 9;
             // 
             // gridView1
             // 
@@ -515,7 +517,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.NgayHoaDonDateEdit.Size = new System.Drawing.Size(218, 20);
             this.NgayHoaDonDateEdit.StyleController = this.dataLayoutDetail;
-            this.NgayHoaDonDateEdit.TabIndex = 4;
+            this.NgayHoaDonDateEdit.TabIndex = 0;
             // 
             // simpleSeparator1
             // 
@@ -551,7 +553,7 @@
             this.lookUpSanPham.Properties.ViewType = DevExpress.XtraEditors.Repository.GridLookUpViewType.GridView;
             this.lookUpSanPham.Size = new System.Drawing.Size(276, 20);
             this.lookUpSanPham.StyleController = this.dataLayoutDetail;
-            this.lookUpSanPham.TabIndex = 9;
+            this.lookUpSanPham.TabIndex = 6;
             // 
             // sanPhamBindingSource
             // 
@@ -613,7 +615,7 @@
             this.btnAddChild.Name = "btnAddChild";
             this.btnAddChild.Size = new System.Drawing.Size(46, 20);
             this.btnAddChild.StyleController = this.dataLayoutDetail;
-            this.btnAddChild.TabIndex = 10;
+            this.btnAddChild.TabIndex = 8;
             // 
             // layoutControlItem3
             // 
@@ -635,7 +637,7 @@
             this.btnDeleteChild.Name = "btnDeleteChild";
             this.btnDeleteChild.Size = new System.Drawing.Size(46, 20);
             this.btnDeleteChild.StyleController = this.dataLayoutDetail;
-            this.btnDeleteChild.TabIndex = 11;
+            this.btnDeleteChild.TabIndex = 9;
             // 
             // emptySpaceItem1
             // 
@@ -674,7 +676,7 @@
             this.txtThanhTien.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtThanhTien.Size = new System.Drawing.Size(120, 20);
             this.txtThanhTien.StyleController = this.dataLayoutDetail;
-            this.txtThanhTien.TabIndex = 12;
+            this.txtThanhTien.TabIndex = 7;
             // 
             // ItemForGhiChu
             // 
@@ -694,7 +696,7 @@
             this.GhiChuTextEdit.Name = "GhiChuTextEdit";
             this.GhiChuTextEdit.Size = new System.Drawing.Size(307, 67);
             this.GhiChuTextEdit.StyleController = this.dataLayoutDetail;
-            this.GhiChuTextEdit.TabIndex = 13;
+            this.GhiChuTextEdit.TabIndex = 5;
             // 
             // ItemForThanhTien
             // 
@@ -720,7 +722,7 @@
             this.ThanhTienTextEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.ThanhTienTextEdit.Size = new System.Drawing.Size(218, 20);
             this.ThanhTienTextEdit.StyleController = this.dataLayoutDetail;
-            this.ThanhTienTextEdit.TabIndex = 5;
+            this.ThanhTienTextEdit.TabIndex = 1;
             // 
             // ItemForNguoiXuat
             // 
@@ -749,7 +751,7 @@
             this.NguoiXuatLookUpEdit.Properties.NullText = "";
             this.NguoiXuatLookUpEdit.Size = new System.Drawing.Size(218, 20);
             this.NguoiXuatLookUpEdit.StyleController = this.dataLayoutDetail;
-            this.NguoiXuatLookUpEdit.TabIndex = 6;
+            this.NguoiXuatLookUpEdit.TabIndex = 3;
             // 
             // nhanVienBindingSource
             // 
@@ -779,7 +781,7 @@
             this.HinhThucThanhToanLookUpEdit.Properties.NullText = "";
             this.HinhThucThanhToanLookUpEdit.Size = new System.Drawing.Size(218, 20);
             this.HinhThucThanhToanLookUpEdit.StyleController = this.dataLayoutDetail;
-            this.HinhThucThanhToanLookUpEdit.TabIndex = 7;
+            this.HinhThucThanhToanLookUpEdit.TabIndex = 2;
             // 
             // danhMucBindingSource
             // 
@@ -813,7 +815,7 @@
             this.DonViVanChuyenLookUpEdit.Properties.NullText = "";
             this.DonViVanChuyenLookUpEdit.Size = new System.Drawing.Size(218, 20);
             this.DonViVanChuyenLookUpEdit.StyleController = this.dataLayoutDetail;
-            this.DonViVanChuyenLookUpEdit.TabIndex = 8;
+            this.DonViVanChuyenLookUpEdit.TabIndex = 4;
             // 
             // donViVanChuyenBindingSource
             // 

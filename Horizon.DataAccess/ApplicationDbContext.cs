@@ -7,7 +7,7 @@ namespace Horizon.DataAccess
         //public ApplicationDbContext(): base("name=ApplicationConnectionString")
         public ApplicationDbContext() : base(AppHelper.Connection.ConnectionString)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Migrations.Configuration>());
+            Database.SetInitializer(new Configuration());
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

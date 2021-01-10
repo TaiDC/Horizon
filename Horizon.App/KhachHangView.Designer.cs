@@ -32,28 +32,28 @@
             this.colTenKhachHang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colGioiTinh = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
             this.colDienThoai = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMaKhachHang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.MaKhachHangTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForMaKhachHang = new DevExpress.XtraLayout.LayoutControlItem();
-            this.TenKhachHangTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.MaKhachHangTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForTenKhachHang = new DevExpress.XtraLayout.LayoutControlItem();
-            this.NgaySinhDateEdit = new DevExpress.XtraEditors.DateEdit();
+            this.TenKhachHangTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForNgaySinh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.GioiTinhImageComboBoxEdit = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.NgaySinhDateEdit = new DevExpress.XtraEditors.DateEdit();
             this.ItemForGioiTinh = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DiaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.GioiTinhImageComboBoxEdit = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.ItemForDiaChi = new DevExpress.XtraLayout.LayoutControlItem();
-            this.DienThoaiTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.DiaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForDienThoai = new DevExpress.XtraLayout.LayoutControlItem();
-            this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.DienThoaiTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForEmail = new DevExpress.XtraLayout.LayoutControlItem();
-            this.SoTaiKhoanTextEdit = new DevExpress.XtraEditors.TextEdit();
+            this.EmailTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForSoTaiKhoan = new DevExpress.XtraLayout.LayoutControlItem();
-            this.GhiChuMemoEdit = new DevExpress.XtraEditors.MemoEdit();
+            this.SoTaiKhoanTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForGhiChu = new DevExpress.XtraLayout.LayoutControlItem();
-            this.repositoryItemImageComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageComboBox();
+            this.GhiChuMemoEdit = new DevExpress.XtraEditors.MemoEdit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutDetail)).BeginInit();
@@ -61,27 +61,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCollection)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaKhachHangTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMaKhachHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenKhachHangTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaKhachHangTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTenKhachHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenKhachHangTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNgaySinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgaySinhDateEdit.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgaySinhDateEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNgaySinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GioiTinhImageComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGioiTinh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GioiTinhImageComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiaChi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DienThoaiTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDienThoai)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DienThoaiTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoTaiKhoanTextEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSoTaiKhoan)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GhiChuMemoEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoTaiKhoanTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGhiChu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhiChuMemoEdit.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMenu
@@ -183,6 +183,16 @@
             this.colGioiTinh.Visible = true;
             this.colGioiTinh.VisibleIndex = 3;
             // 
+            // repositoryItemImageComboBox1
+            // 
+            this.repositoryItemImageComboBox1.AutoHeight = false;
+            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemImageComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "T", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "G", -1)});
+            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
+            // 
             // colDienThoai
             // 
             this.colDienThoai.FieldName = "DienThoai";
@@ -215,33 +225,24 @@
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
             this.layoutControlGroup2.Size = new System.Drawing.Size(280, 332);
             // 
-            // MaKhachHangTextEdit
-            // 
-            this.MaKhachHangTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "MaKhachHang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.MaKhachHangTextEdit.Location = new System.Drawing.Point(98, 12);
-            this.MaKhachHangTextEdit.MenuManager = this.ribbonControlMenu;
-            this.MaKhachHangTextEdit.Name = "MaKhachHangTextEdit";
-            this.MaKhachHangTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.MaKhachHangTextEdit.StyleController = this.dataLayoutDetail;
-            this.MaKhachHangTextEdit.TabIndex = 4;
-            // 
             // ItemForMaKhachHang
             // 
             this.ItemForMaKhachHang.Control = this.MaKhachHangTextEdit;
             this.ItemForMaKhachHang.Location = new System.Drawing.Point(0, 0);
             this.ItemForMaKhachHang.Name = "ItemForMaKhachHang";
             this.ItemForMaKhachHang.Size = new System.Drawing.Size(280, 24);
-            this.ItemForMaKhachHang.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForMaKhachHang.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // TenKhachHangTextEdit
+            // MaKhachHangTextEdit
             // 
-            this.TenKhachHangTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "TenKhachHang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.TenKhachHangTextEdit.Location = new System.Drawing.Point(98, 36);
-            this.TenKhachHangTextEdit.MenuManager = this.ribbonControlMenu;
-            this.TenKhachHangTextEdit.Name = "TenKhachHangTextEdit";
-            this.TenKhachHangTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.TenKhachHangTextEdit.StyleController = this.dataLayoutDetail;
-            this.TenKhachHangTextEdit.TabIndex = 5;
+            this.MaKhachHangTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "MaKhachHang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.MaKhachHangTextEdit.Location = new System.Drawing.Point(134, 12);
+            this.MaKhachHangTextEdit.MenuManager = this.ribbonControlMenu;
+            this.MaKhachHangTextEdit.Name = "MaKhachHangTextEdit";
+            this.MaKhachHangTextEdit.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.MaKhachHangTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.MaKhachHangTextEdit.StyleController = this.dataLayoutDetail;
+            this.MaKhachHangTextEdit.TabIndex = 4;
             // 
             // ItemForTenKhachHang
             // 
@@ -249,22 +250,17 @@
             this.ItemForTenKhachHang.Location = new System.Drawing.Point(0, 24);
             this.ItemForTenKhachHang.Name = "ItemForTenKhachHang";
             this.ItemForTenKhachHang.Size = new System.Drawing.Size(280, 24);
-            this.ItemForTenKhachHang.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForTenKhachHang.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // NgaySinhDateEdit
+            // TenKhachHangTextEdit
             // 
-            this.NgaySinhDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "NgaySinh", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.NgaySinhDateEdit.EditValue = null;
-            this.NgaySinhDateEdit.Location = new System.Drawing.Point(98, 60);
-            this.NgaySinhDateEdit.MenuManager = this.ribbonControlMenu;
-            this.NgaySinhDateEdit.Name = "NgaySinhDateEdit";
-            this.NgaySinhDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.NgaySinhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.NgaySinhDateEdit.Size = new System.Drawing.Size(190, 20);
-            this.NgaySinhDateEdit.StyleController = this.dataLayoutDetail;
-            this.NgaySinhDateEdit.TabIndex = 6;
+            this.TenKhachHangTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "TenKhachHang", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.TenKhachHangTextEdit.Location = new System.Drawing.Point(134, 36);
+            this.TenKhachHangTextEdit.MenuManager = this.ribbonControlMenu;
+            this.TenKhachHangTextEdit.Name = "TenKhachHangTextEdit";
+            this.TenKhachHangTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.TenKhachHangTextEdit.StyleController = this.dataLayoutDetail;
+            this.TenKhachHangTextEdit.TabIndex = 5;
             // 
             // ItemForNgaySinh
             // 
@@ -273,22 +269,22 @@
             this.ItemForNgaySinh.Name = "ItemForNgaySinh";
             this.ItemForNgaySinh.Size = new System.Drawing.Size(280, 24);
             this.ItemForNgaySinh.Text = "Ngay Sinh";
-            this.ItemForNgaySinh.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForNgaySinh.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // GioiTinhImageComboBoxEdit
+            // NgaySinhDateEdit
             // 
-            this.GioiTinhImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "GioiTinh", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GioiTinhImageComboBoxEdit.Location = new System.Drawing.Point(98, 84);
-            this.GioiTinhImageComboBoxEdit.MenuManager = this.ribbonControlMenu;
-            this.GioiTinhImageComboBoxEdit.Name = "GioiTinhImageComboBoxEdit";
-            this.GioiTinhImageComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.NgaySinhDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "NgaySinh", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.NgaySinhDateEdit.EditValue = null;
+            this.NgaySinhDateEdit.Location = new System.Drawing.Point(134, 60);
+            this.NgaySinhDateEdit.MenuManager = this.ribbonControlMenu;
+            this.NgaySinhDateEdit.Name = "NgaySinhDateEdit";
+            this.NgaySinhDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.GioiTinhImageComboBoxEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "T", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "G", -1)});
-            this.GioiTinhImageComboBoxEdit.Size = new System.Drawing.Size(190, 20);
-            this.GioiTinhImageComboBoxEdit.StyleController = this.dataLayoutDetail;
-            this.GioiTinhImageComboBoxEdit.TabIndex = 7;
+            this.NgaySinhDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.NgaySinhDateEdit.Size = new System.Drawing.Size(154, 20);
+            this.NgaySinhDateEdit.StyleController = this.dataLayoutDetail;
+            this.NgaySinhDateEdit.TabIndex = 6;
             // 
             // ItemForGioiTinh
             // 
@@ -296,17 +292,22 @@
             this.ItemForGioiTinh.Location = new System.Drawing.Point(0, 72);
             this.ItemForGioiTinh.Name = "ItemForGioiTinh";
             this.ItemForGioiTinh.Size = new System.Drawing.Size(280, 24);
-            this.ItemForGioiTinh.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForGioiTinh.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // DiaChiTextEdit
+            // GioiTinhImageComboBoxEdit
             // 
-            this.DiaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DiaChi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DiaChiTextEdit.Location = new System.Drawing.Point(98, 108);
-            this.DiaChiTextEdit.MenuManager = this.ribbonControlMenu;
-            this.DiaChiTextEdit.Name = "DiaChiTextEdit";
-            this.DiaChiTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.DiaChiTextEdit.StyleController = this.dataLayoutDetail;
-            this.DiaChiTextEdit.TabIndex = 8;
+            this.GioiTinhImageComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "GioiTinh", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.GioiTinhImageComboBoxEdit.Location = new System.Drawing.Point(134, 84);
+            this.GioiTinhImageComboBoxEdit.MenuManager = this.ribbonControlMenu;
+            this.GioiTinhImageComboBoxEdit.Name = "GioiTinhImageComboBoxEdit";
+            this.GioiTinhImageComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.GioiTinhImageComboBoxEdit.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "T", -1),
+            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "G", -1)});
+            this.GioiTinhImageComboBoxEdit.Size = new System.Drawing.Size(154, 20);
+            this.GioiTinhImageComboBoxEdit.StyleController = this.dataLayoutDetail;
+            this.GioiTinhImageComboBoxEdit.TabIndex = 7;
             // 
             // ItemForDiaChi
             // 
@@ -314,17 +315,17 @@
             this.ItemForDiaChi.Location = new System.Drawing.Point(0, 96);
             this.ItemForDiaChi.Name = "ItemForDiaChi";
             this.ItemForDiaChi.Size = new System.Drawing.Size(280, 24);
-            this.ItemForDiaChi.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForDiaChi.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // DienThoaiTextEdit
+            // DiaChiTextEdit
             // 
-            this.DienThoaiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DienThoai", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.DienThoaiTextEdit.Location = new System.Drawing.Point(98, 132);
-            this.DienThoaiTextEdit.MenuManager = this.ribbonControlMenu;
-            this.DienThoaiTextEdit.Name = "DienThoaiTextEdit";
-            this.DienThoaiTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.DienThoaiTextEdit.StyleController = this.dataLayoutDetail;
-            this.DienThoaiTextEdit.TabIndex = 9;
+            this.DiaChiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DiaChi", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DiaChiTextEdit.Location = new System.Drawing.Point(134, 108);
+            this.DiaChiTextEdit.MenuManager = this.ribbonControlMenu;
+            this.DiaChiTextEdit.Name = "DiaChiTextEdit";
+            this.DiaChiTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.DiaChiTextEdit.StyleController = this.dataLayoutDetail;
+            this.DiaChiTextEdit.TabIndex = 8;
             // 
             // ItemForDienThoai
             // 
@@ -332,17 +333,17 @@
             this.ItemForDienThoai.Location = new System.Drawing.Point(0, 120);
             this.ItemForDienThoai.Name = "ItemForDienThoai";
             this.ItemForDienThoai.Size = new System.Drawing.Size(280, 24);
-            this.ItemForDienThoai.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForDienThoai.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // EmailTextEdit
+            // DienThoaiTextEdit
             // 
-            this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.EmailTextEdit.Location = new System.Drawing.Point(98, 156);
-            this.EmailTextEdit.MenuManager = this.ribbonControlMenu;
-            this.EmailTextEdit.Name = "EmailTextEdit";
-            this.EmailTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.EmailTextEdit.StyleController = this.dataLayoutDetail;
-            this.EmailTextEdit.TabIndex = 10;
+            this.DienThoaiTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "DienThoai", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.DienThoaiTextEdit.Location = new System.Drawing.Point(134, 132);
+            this.DienThoaiTextEdit.MenuManager = this.ribbonControlMenu;
+            this.DienThoaiTextEdit.Name = "DienThoaiTextEdit";
+            this.DienThoaiTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.DienThoaiTextEdit.StyleController = this.dataLayoutDetail;
+            this.DienThoaiTextEdit.TabIndex = 9;
             // 
             // ItemForEmail
             // 
@@ -350,17 +351,17 @@
             this.ItemForEmail.Location = new System.Drawing.Point(0, 144);
             this.ItemForEmail.Name = "ItemForEmail";
             this.ItemForEmail.Size = new System.Drawing.Size(280, 24);
-            this.ItemForEmail.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForEmail.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // SoTaiKhoanTextEdit
+            // EmailTextEdit
             // 
-            this.SoTaiKhoanTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SoTaiKhoan", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.SoTaiKhoanTextEdit.Location = new System.Drawing.Point(98, 180);
-            this.SoTaiKhoanTextEdit.MenuManager = this.ribbonControlMenu;
-            this.SoTaiKhoanTextEdit.Name = "SoTaiKhoanTextEdit";
-            this.SoTaiKhoanTextEdit.Size = new System.Drawing.Size(190, 20);
-            this.SoTaiKhoanTextEdit.StyleController = this.dataLayoutDetail;
-            this.SoTaiKhoanTextEdit.TabIndex = 11;
+            this.EmailTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "Email", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.EmailTextEdit.Location = new System.Drawing.Point(134, 156);
+            this.EmailTextEdit.MenuManager = this.ribbonControlMenu;
+            this.EmailTextEdit.Name = "EmailTextEdit";
+            this.EmailTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.EmailTextEdit.StyleController = this.dataLayoutDetail;
+            this.EmailTextEdit.TabIndex = 10;
             // 
             // ItemForSoTaiKhoan
             // 
@@ -368,17 +369,17 @@
             this.ItemForSoTaiKhoan.Location = new System.Drawing.Point(0, 168);
             this.ItemForSoTaiKhoan.Name = "ItemForSoTaiKhoan";
             this.ItemForSoTaiKhoan.Size = new System.Drawing.Size(280, 24);
-            this.ItemForSoTaiKhoan.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForSoTaiKhoan.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // GhiChuMemoEdit
+            // SoTaiKhoanTextEdit
             // 
-            this.GhiChuMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "GhiChu", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.GhiChuMemoEdit.Location = new System.Drawing.Point(98, 204);
-            this.GhiChuMemoEdit.MenuManager = this.ribbonControlMenu;
-            this.GhiChuMemoEdit.Name = "GhiChuMemoEdit";
-            this.GhiChuMemoEdit.Size = new System.Drawing.Size(190, 136);
-            this.GhiChuMemoEdit.StyleController = this.dataLayoutDetail;
-            this.GhiChuMemoEdit.TabIndex = 12;
+            this.SoTaiKhoanTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "SoTaiKhoan", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.SoTaiKhoanTextEdit.Location = new System.Drawing.Point(134, 180);
+            this.SoTaiKhoanTextEdit.MenuManager = this.ribbonControlMenu;
+            this.SoTaiKhoanTextEdit.Name = "SoTaiKhoanTextEdit";
+            this.SoTaiKhoanTextEdit.Size = new System.Drawing.Size(154, 20);
+            this.SoTaiKhoanTextEdit.StyleController = this.dataLayoutDetail;
+            this.SoTaiKhoanTextEdit.TabIndex = 11;
             // 
             // ItemForGhiChu
             // 
@@ -387,17 +388,17 @@
             this.ItemForGhiChu.Name = "ItemForGhiChu";
             this.ItemForGhiChu.Size = new System.Drawing.Size(280, 140);
             this.ItemForGhiChu.StartNewLine = true;
-            this.ItemForGhiChu.TextSize = new System.Drawing.Size(74, 13);
+            this.ItemForGhiChu.TextSize = new System.Drawing.Size(110, 13);
             // 
-            // repositoryItemImageComboBox1
+            // GhiChuMemoEdit
             // 
-            this.repositoryItemImageComboBox1.AutoHeight = false;
-            this.repositoryItemImageComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemImageComboBox1.Items.AddRange(new DevExpress.XtraEditors.Controls.ImageComboBoxItem[] {
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nam", "T", -1),
-            new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Nữ", "G", -1)});
-            this.repositoryItemImageComboBox1.Name = "repositoryItemImageComboBox1";
+            this.GhiChuMemoEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bindingSource, "GhiChu", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.GhiChuMemoEdit.Location = new System.Drawing.Point(134, 204);
+            this.GhiChuMemoEdit.MenuManager = this.ribbonControlMenu;
+            this.GhiChuMemoEdit.Name = "GhiChuMemoEdit";
+            this.GhiChuMemoEdit.Size = new System.Drawing.Size(154, 136);
+            this.GhiChuMemoEdit.StyleController = this.dataLayoutDetail;
+            this.GhiChuMemoEdit.TabIndex = 12;
             // 
             // KhachHangView
             // 
@@ -411,27 +412,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlCollection)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MaKhachHangTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForMaKhachHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TenKhachHangTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaKhachHangTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTenKhachHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TenKhachHangTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemForNgaySinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgaySinhDateEdit.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NgaySinhDateEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ItemForNgaySinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GioiTinhImageComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGioiTinh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GioiTinhImageComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiaChi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DienThoaiTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDienThoai)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DienThoaiTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SoTaiKhoanTextEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmailTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForSoTaiKhoan)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GhiChuMemoEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SoTaiKhoanTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForGhiChu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GhiChuMemoEdit.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

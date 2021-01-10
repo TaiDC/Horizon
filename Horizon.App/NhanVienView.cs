@@ -22,7 +22,7 @@ namespace Horizon.App
             #region Button Command
             btnRefresh.ItemClick += delegate { _vm.Load(); };
 
-            btnAdd.ItemClick += delegate { _vm.AddCommand.Execute(); };
+            btnAdd.ItemClick += delegate { _vm.AddCommand.Execute(); MaNhanVienTextEdit.Focus(); };
             btnEdit.ItemClick += delegate { _vm.EditCommand.Execute(); };
             btnDelete.ItemClick += delegate { _vm.DeleteCommand.Execute(); };
             btnSave.ItemClick += delegate { _vm.SaveCommand.Execute(); };
