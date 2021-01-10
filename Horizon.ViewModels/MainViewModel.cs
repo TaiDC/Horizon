@@ -16,9 +16,8 @@ namespace Horizon.ViewModels
         UnitOfWork UnitOfWork = new UnitOfWork();
         public void BC_001_NhapXuatTon(DateTime tungay, DateTime denngay)
         {
-            var ttdtt = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
             var query = (from s in UnitOfWork.SanPham.GetList()
-                          join hdct in UnitOfWork.HoaDonChiTiet.GetList(hdct=>hdct.HoaDon.HuyHoaDon==false && hdct.HoaDon.HoanTraHoaDon==false && hdct.HoaDon.TinhTrang.Id == ttdtt.Id) on s.Id equals hdct.SanPham.Id into sgroup
+                          join hdct in UnitOfWork.HoaDonChiTiet.GetList(hdct=>hdct.HoaDon.HuyHoaDon==false && hdct.HoaDon.HoanTraHoaDon==false) on s.Id equals hdct.SanPham.Id into sgroup
                           from ct in sgroup.DefaultIfEmpty()
                          select new
                          {
@@ -35,8 +34,7 @@ namespace Horizon.ViewModels
 
         public void BC_002_TheKho(DateTime tungay, DateTime denngay)
         {
-            var ttdtt = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
-            var query = UnitOfWork.HoaDonChiTiet.GetList(hdct => hdct.HoaDon.HuyHoaDon == false && hdct.HoaDon.HoanTraHoaDon == false && hdct.HoaDon.TinhTrang.Id == ttdtt.Id
+            var query = UnitOfWork.HoaDonChiTiet.GetList(hdct => hdct.HoaDon.HuyHoaDon == false && hdct.HoaDon.HoanTraHoaDon == false
             && hdct.HoaDon.NgayHoaDon >= tungay && hdct.HoaDon.NgayHoaDon <= denngay);
             XtraReport report = XtraReport.FromFile(@"Report\BC_002_TheKho.repx", true);
             var rb= report.Band.Controls[1].Controls["crosstab"] as XRCrossTab ;

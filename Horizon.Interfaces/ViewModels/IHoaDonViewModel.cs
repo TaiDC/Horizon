@@ -27,6 +27,7 @@ namespace Horizon.Interfaces.ViewModels
         Command PaymentCommand { get; set; }
         Command CancelCommand { get; set; }
         Command RefundCommand { get; set; }
+        Command DeliveredCommand { get; set; }
 
     }
 }

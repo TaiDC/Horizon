@@ -6,8 +6,7 @@ namespace Horizon.Interfaces.Repositories
     public interface IDanhMucRepository : IRepository<DanhMuc>
     {
         IEnumerable<DanhMuc> GetListByLoaiSP(string loaidm);
-        DanhMuc TrangThaiDaThanhToan();
-        DanhMuc TrangThaiChuaThanhToan();
+        DanhMuc GetDanhMucByCode(string code);
         IEnumerable<DanhMuc> GetListHinhThucThanhToan();
     }
 }

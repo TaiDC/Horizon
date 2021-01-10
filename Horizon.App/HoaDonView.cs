@@ -47,6 +47,8 @@ namespace Horizon.App
             btnPayment.ItemClick += delegate { _vm.PaymentCommand.Execute(); };
             btnCancel.ItemClick += delegate { _vm.CancelCommand.Execute(); };
             btnRefund.ItemClick += delegate { _vm.RefundCommand.Execute(); };
+            btnDelivered.ItemClick += delegate { _vm.DeliveredCommand.Execute(); };
+
 
             btnAdd.DataBindings.Add(_vm.AddCommand.EnabledBinding);
             btnEdit.DataBindings.Add(_vm.EditCommand.EnabledBinding);
@@ -56,6 +58,7 @@ namespace Horizon.App
             btnPayment.DataBindings.Add(_vm.PaymentCommand.EnabledBinding);
             btnCancel.DataBindings.Add(_vm.CancelCommand.EnabledBinding);
             btnRefund.DataBindings.Add(_vm.RefundCommand.EnabledBinding);
+            btnDelivered.DataBindings.Add(_vm.DeliveredCommand.EnabledBinding);
 
 
             btnAddChild.Click += delegate { _vm.NewSanPham(lookUpSanPham.EditValue, txtThanhTien.EditValue); lookUpSanPham.EditValue = null; };
@@ -79,6 +82,16 @@ namespace Horizon.App
             khachHangBindingSource.CurrentChanged += KhachHangBindingSource_CurrentChanged;
             lookUpHoaDon.EditValueChanged += delegate { bindingSource.Position = lookUpHoaDon.Properties.GetIndexByKeyValue(lookUpHoaDon.EditValue); };
             lookUpSanPham.EditValueChanged += delegate { sanPhamBindingSource.Position = lookUpSanPham.Properties.GetIndexByKeyValue(lookUpSanPham.EditValue); };
+            
+            txtThanhTien.KeyPress += (sender, e) =>
+            {
+                if (e.KeyChar == 13)
+                {
+                    _vm.NewSanPham(lookUpSanPham.EditValue, txtThanhTien.EditValue);
+                    lookUpSanPham.EditValue = null;
+                    lookUpSanPham.Focus();
+                }
+            };
         }
 
         private void MaKhachHangTextEdit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

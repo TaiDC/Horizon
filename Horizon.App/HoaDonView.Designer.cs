@@ -95,6 +95,7 @@
             this.btnRefund = new DevExpress.XtraBars.BarButtonItem();
             this.btnCancel = new DevExpress.XtraBars.BarButtonItem();
             this.btnFind = new DevExpress.XtraBars.BarButtonItem();
+            this.btnDelivered = new DevExpress.XtraBars.BarButtonItem();
             maKhachHangLabel = new System.Windows.Forms.Label();
             tenKhachHangLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -160,8 +161,9 @@
             this.btnPayment,
             this.subNghiepVu,
             this.btnCancel,
-            this.btnRefund});
-            this.ribbonControlMenu.MaxItemId = 17;
+            this.btnRefund,
+            this.btnDelivered});
+            this.ribbonControlMenu.MaxItemId = 18;
             // 
             // 
             // 
@@ -880,8 +882,9 @@
             this.subNghiepVu.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("subNghiepVu.ImageOptions.SvgImage")));
             this.subNghiepVu.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.btnPayment),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnRefund),
-            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancel)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnDelivered),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnCancel),
+            new DevExpress.XtraBars.LinkPersistInfo(this.btnRefund)});
             this.subNghiepVu.Name = "subNghiepVu";
             // 
             // btnPayment
@@ -912,6 +915,13 @@
             this.btnFind.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFind.ImageOptions.SvgImage")));
             this.btnFind.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F));
             this.btnFind.Name = "btnFind";
+            // 
+            // btnDelivered
+            // 
+            this.btnDelivered.Caption = "Chuyển Hàng";
+            this.btnDelivered.Id = 17;
+            this.btnDelivered.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.btnDelivered.Name = "btnDelivered";
             // 
             // HoaDonView
             // 
@@ -1040,5 +1050,6 @@
         private DevExpress.XtraLayout.LayoutControlItem ItemForGhiChu;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.SimpleLabelItem simpleLabelItem1;
+        private DevExpress.XtraBars.BarButtonItem btnDelivered;
     }
 }

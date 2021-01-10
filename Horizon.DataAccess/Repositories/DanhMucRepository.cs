@@ -10,6 +10,11 @@ namespace Horizon.DataAccess.Repositories
         {
         }
 
+        public DanhMuc GetDanhMucByCode(string code)
+        {
+            return DbSetEntity.Where(dm => dm.MaDanhMuc == code).FirstOrDefault();
+        }
+
         public IEnumerable<DanhMuc> GetListByLoaiSP(string loaidm)
         {
             return DbSetEntity.Where(dm => dm.LoaiDanhMuc == loaidm).ToList();
@@ -20,14 +25,6 @@ namespace Horizon.DataAccess.Repositories
             return DbSetEntity.Where(dm => dm.LoaiDanhMuc == "HinhThucThanhToan").ToList();
         }
 
-        public DanhMuc TrangThaiChuaThanhToan()
-        {
-            return DbSetEntity.Where(dm => dm.LoaiDanhMuc == "TrangThai" && dm.MaDanhMuc == "CTT").FirstOrDefault();
-        }
 
-        public DanhMuc TrangThaiDaThanhToan()
-        {
-            return DbSetEntity.Where(dm => dm.LoaiDanhMuc == "TrangThai" && dm.MaDanhMuc == "HTTT").FirstOrDefault();
-        }
     }
 }

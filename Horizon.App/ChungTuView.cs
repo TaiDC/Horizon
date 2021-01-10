@@ -59,6 +59,15 @@ namespace Horizon.App
             btnDeleteChiTiet.DataBindings.Add("Enabled", _vm.TrashCommand, "Enabled");
 
             #endregion
+            txtDonGia.KeyPress += (sender, e) =>
+            {
+                if (e.KeyChar == 13)
+                {
+                    _vm.NewSanPham(lookUpEditLoaiSanPham.EditValue, txtDonGia.EditValue);
+                    lookUpEditLoaiSanPham.Focus();
+                    
+                }
+            };
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Horizon.ViewModels
         public BindingSource BindingSourceSanPham { get; set; }
         public Command PaymentCommand { get; set; }
         public Command CancelCommand { get; set; }
+        public Command DeliveredCommand { get; set; }
         public Command RefundCommand { get; set; }
         public BindingSource BindingSourceNhanVien { get; set; }
         public BindingSource BindingSourceHinhThucThanhToan { get; set; }
@@ -43,9 +44,12 @@ namespace Horizon.ViewModels
             PaymentCommand = new Command(PaymentExcute, PaymentCanExcute);
             CancelCommand = new Command(CancelExcute, CancelCanExcute);
             RefundCommand = new Command(RefundExcute, RefundCanExcute);
+            DeliveredCommand = new Command(DeliveredExcute, DeliveredCanExcute);
 
             base.InitializeView();
         }
+
+
 
         #region Command Excute / Command CanExcute
 
@@ -53,11 +57,7 @@ namespace Horizon.ViewModels
         {
             var obj = BindingSource.Current as HoaDon;
             if (obj == null) return false;
-            if (obj.TinhTrang == null) return false;
-
-            var objTT = UnitOfWork.DanhMuc.TrangThaiChuaThanhToan();
-            if (obj.TinhTrang.Equals(objTT)) return false;
-            if (obj.HuyHoaDon == true) return false;
+            if (obj.DaChuyen == false) return false;
             return !obj.HoanTraHoaDon;
         }
         private void RefundExcute()
@@ -65,6 +65,9 @@ namespace Horizon.ViewModels
             if (XtraMessageBox.Show("Bạn có muốn hoàn trả hóa đơn?", "Thông Báo", buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var obj = BindingSource.Current as HoaDon;
+                DanhMuc tt = new DanhMuc();
+                tt = UnitOfWork.DanhMuc.GetDanhMucByCode("HTDH");
+                obj.TinhTrang = tt;
                 obj.HoanTraHoaDon = true;
                 UnitOfWork.HoaDon.Update(obj);
                 if (UnitOfWork.SaveChanges())
@@ -78,11 +81,7 @@ namespace Horizon.ViewModels
         {
             var obj = BindingSource.Current as HoaDon;
             if (obj == null) return false;
-            if (obj.TinhTrang == null) return false;
-
-            var objTT = UnitOfWork.DanhMuc.TrangThaiChuaThanhToan();
-            if (obj.TinhTrang.Equals(objTT)) return false;
-            if (obj.HoanTraHoaDon == true) return false;
+            if (obj.DaThanhToan == false) return false;
             return !obj.HuyHoaDon;
         }
         private void CancelExcute()
@@ -90,7 +89,10 @@ namespace Horizon.ViewModels
             if (XtraMessageBox.Show("Bạn có hủy hóa đơn?", "Thông Báo", buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var obj = BindingSource.Current as HoaDon;
+                DanhMuc tt = new DanhMuc();
+                tt = UnitOfWork.DanhMuc.GetDanhMucByCode("HDH");
                 obj.HuyHoaDon = true;
+                obj.TinhTrang = tt;
                 UnitOfWork.HoaDon.Update(obj);
                 if (UnitOfWork.SaveChanges())
                     AppHelper.MessageCustom.ShowNotify("Đã HỦY hóa đơn", "THÔNG BÁO");
@@ -103,18 +105,21 @@ namespace Horizon.ViewModels
         {
             var obj = BindingSource.Current as HoaDon;
             if (obj == null) return false;
-            if (obj.TinhTrang == null) return false;
             if (obj.Id == 0) return false;
-            var ttHoanTat = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
-            
-            return !obj.TinhTrang.Equals(ttHoanTat);
+            return !obj.DaThanhToan && !obj.HoanTraHoaDon;//Chỉ thanh toán khi Hóa đơn chưa thanh toán và hóa đơn chưa bị trả hàng
         }
         private void PaymentExcute()
         {
             if (XtraMessageBox.Show("Bạn có muốn xác nhận thanh toán?","Thông Báo", buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 var obj = BindingSource.Current as HoaDon;
-                obj.TinhTrang = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
+                DanhMuc tt = new DanhMuc();
+                if (obj.DaChuyen == false)
+                    tt = UnitOfWork.DanhMuc.GetDanhMucByCode("TTCC");
+                else
+                    tt = UnitOfWork.DanhMuc.GetDanhMucByCode("HT");
+                obj.DaThanhToan = true;
+                obj.TinhTrang = tt;
                 UnitOfWork.HoaDon.Update(obj);
                 if (UnitOfWork.SaveChanges())
                     AppHelper.MessageCustom.ShowNotify("Đã XÁC NHẬN THANH TOÁN hóa đơn", "THÔNG BÁO");
@@ -122,6 +127,33 @@ namespace Horizon.ViewModels
                     AppHelper.MessageCustom.ShowNotify("Đã xảy ra lỗi trong quá trình thực hiện", "THÔNG BÁO");
             }
         }
+        private bool DeliveredCanExcute()
+        {
+            var obj = BindingSource.Current as HoaDon;
+            if (obj == null) return false;
+            if (obj.Id == 0) return false;
+            return !obj.DaChuyen && !obj.HuyHoaDon;//Chỉ được chuyển khi chưa chuyển và chưa hủy hóa đơn
+        }
+        private void DeliveredExcute()
+        {
+            if (XtraMessageBox.Show("Bạn có muốn xác nhận Vận chuyển đơn hàng?", "Thông Báo", buttons: MessageBoxButtons.YesNo, icon: MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var obj = BindingSource.Current as HoaDon;
+                DanhMuc tt = new DanhMuc();
+                if (obj.DaThanhToan == false)
+                    tt = UnitOfWork.DanhMuc.GetDanhMucByCode("CCTT");
+                else
+                    tt = UnitOfWork.DanhMuc.GetDanhMucByCode("HT");
+                obj.TinhTrang = tt;
+                obj.DaChuyen = true;
+                UnitOfWork.HoaDon.Update(obj);
+                if (UnitOfWork.SaveChanges())
+                    AppHelper.MessageCustom.ShowNotify("Đã XÁC NHẬN VẬN CHUYỂN hóa đơn", "THÔNG BÁO");
+                else
+                    AppHelper.MessageCustom.ShowNotify("Đã xảy ra lỗi trong quá trình thực hiện", "THÔNG BÁO");
+            }
+        }
+
         private void PrintExcute()
         {
             AppHelper.PrintHelper.PrintReport(BindingSource, "BC_002_HoaDon");
@@ -150,22 +182,21 @@ namespace Horizon.ViewModels
                 var objKH = BindingSourceKhachHang.AddNew() as KhachHang;
                 objKH.NgaySinh = DateTime.Now.Date;
             }
-            var ttCHoanTat = UnitOfWork.DanhMuc.TrangThaiChuaThanhToan();
+            var ttLenDon = UnitOfWork.DanhMuc.GetDanhMucByCode("LD");
 
             var obj = BindingSource.AddNew() as HoaDon;
             obj.SoHoaDon = (UnitOfWork.HoaDon.GetMaxSoHoaDonByDatetime(DateTime.Now) + 1).ToString("D3");
             obj.MaHoaDon = "HD" + DateTime.Now.ToString("/yy/MM/") + obj.SoHoaDon; //   HD/21/01/xxx
             obj.NgayHoaDon = DateTime.Now.Date;
             obj.KhachHang = BindingSourceKhachHang.Current as KhachHang;
-            obj.TinhTrang = ttCHoanTat;
+            obj.TinhTrang = ttLenDon;
             //LookUpEditHoaDon.EditValue = obj;
             return base.Add();
         }
         public override bool Edit()
         {
-            var objTT = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
             var obj = BindingSource.Current as HoaDon;
-            if (obj.HuyHoaDon ==true || obj.HoanTraHoaDon ==true || obj.TinhTrang.Equals(objTT))
+            if (obj.HuyHoaDon ==true || obj.HoanTraHoaDon ==true || obj.DaThanhToan ==true || obj.DaChuyen == true)
             {
                 XtraMessageBox.Show("Phiếu đã phát sinh nghiệp vụ, Không thể chỉnh sửa", "Cảnh Báo");
                 return true;
@@ -174,9 +205,8 @@ namespace Horizon.ViewModels
         }
         public override bool Delete()
         {
-            var objTT = UnitOfWork.DanhMuc.TrangThaiDaThanhToan();
-            var obj = BindingSource.Current as HoaDon;
-            if (obj.HuyHoaDon == true || obj.HoanTraHoaDon == true || obj.TinhTrang.Equals(objTT))
+            var obj = BindingSource.Current as HoaDon; 
+            if (obj.HuyHoaDon == true || obj.HoanTraHoaDon == true || obj.DaThanhToan == true || obj.DaChuyen == true)
             {
                 XtraMessageBox.Show("Phiếu đã phát sinh nghiệp vụ, Không thể xóa", "Cảnh Báo");
                 return true;
@@ -425,6 +455,7 @@ namespace Horizon.ViewModels
             PaymentCommand.NotifyChange();
             CancelCommand.NotifyChange();
             RefundCommand.NotifyChange();
+            DeliveredCommand.NotifyChange();
         }
     }
 }

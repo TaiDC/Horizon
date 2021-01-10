@@ -29,21 +29,12 @@ namespace Horizon.ViewModels
 
         private void ViewExcute()
         {
-            XtraReport report = XtraReport.FromFile(@"Report\\LabelReport.repx", true);
-            report.DataSource = GetSelectedView();
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PreviewForm.WindowState = FormWindowState.Maximized;
-            printTool.ShowPreviewDialog();
+            AppHelper.PrintHelper.ViewReport(GetSelectedView(), "LabelReport");
         }
 
         private void PrintExcute()
         {
-            XtraReport report = XtraReport.FromFile(@"Report\\LabelReport.repx", true);
-            report.DataSource = GetSelectedView();
-            // Show the report's Print Preview.
-            ReportPrintTool printTool = new ReportPrintTool(report);
-            printTool.PrintDialog();
+            AppHelper.PrintHelper.PrintReport(GetSelectedView(), "LabelReport");
         }
 
         public void Load()
