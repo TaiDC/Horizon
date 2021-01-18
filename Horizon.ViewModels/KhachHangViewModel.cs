@@ -7,15 +7,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Horizon.ViewModels
 {
     public class KhachHangViewModel: BaseDictionaryViewModel, IKhachHangViewModel
     {
         UnitOfWork UnitOfWork = new UnitOfWork();
+
+        public BindingSource TinhBindingSource { get; set; }
+        public BindingSource HuyenBindingSource { get; set; }
+        public BindingSource XaBindingSource { get; set; }
+
         public override void Load()
         {
             BindingSource.DataSource = UnitOfWork.KhachHang.GetList();
+            TinhBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(t => t.CapDonVi == 1);
+            HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == 1);
         }
         public override bool Add()
         {

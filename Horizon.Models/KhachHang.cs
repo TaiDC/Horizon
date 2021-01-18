@@ -25,8 +25,16 @@ namespace Horizon.Models
         public DateTime NgaySinh { get => ngaySinh; set => Set(ref ngaySinh, value); }
         [Display(Name = "Giới Tính")]
         public string GioiTinh { get => gioiTinh; set => Set(ref gioiTinh, value); }
+
+        public string SoNha { get; set; }
+        public DonViHanhChinh Tinh { get; set; }
+        public DonViHanhChinh Huyen { get; set; }
+        public DonViHanhChinh Xa { get; set; }
+
+
+
         [Display(Name = "Địa Chỉ")]
-        public string DiaChi { get => diaChi; set => Set(ref diaChi, value); }
+        public string DiaChi { get => DonViHanhChinh.DiaChi(Tinh,Huyen,Xa,SoNha); set => Set(ref diaChi, value); }
         [Display(Name = "Điện Thoại")]
         public string DienThoai { get => dienThoai; set => Set(ref dienThoai, value); }
         [Display(Name = "Email")]

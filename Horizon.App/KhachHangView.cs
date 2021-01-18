@@ -23,6 +23,9 @@ namespace Horizon.App
 
             #region Initialize ViewModel
             _vm.BindingSource = bindingSource;
+            _vm.TinhBindingSource = donViHanhChinhTinhBindingSource;
+            _vm.HuyenBindingSource = donViHanhChinhHuyenBindingSource;
+            _vm.XaBindingSource = donViHanhChinhXaBindingSource;
             _vm.DataLayoutControlDetail = dataLayoutDetail;
             _vm.GridControlCollection = gridControlCollection;
             _vm.InitializeView();
@@ -45,6 +48,9 @@ namespace Horizon.App
             btnTrash.DataBindings.Add(_vm.TrashCommand.EnabledBinding);
 
             #endregion
+
+            TinhLookUpEdit.EditValueChanged += delegate { bindingSource.Position = TinhLookUpEdit.ItemIndex; };
+
         }
     }
 }

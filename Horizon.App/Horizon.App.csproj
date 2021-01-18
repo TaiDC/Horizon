@@ -236,6 +236,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Horizon.Models.ChungTu.datasource" />
     <None Include="Properties\DataSources\Horizon.Models.DanhMuc.datasource" />
+    <None Include="Properties\DataSources\Horizon.Models.DonViHanhChinh.datasource" />
     <None Include="Properties\DataSources\Horizon.Models.DonViVanChuyen.datasource" />
     <None Include="Properties\DataSources\Horizon.Models.HoaDon.datasource" />
     <None Include="Properties\DataSources\Horizon.Models.HoaDonChiTiet.datasource" />

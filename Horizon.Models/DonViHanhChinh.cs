@@ -12,22 +12,18 @@ namespace Horizon.Models
         private DonViHanhChinh capTren;
         public DonViHanhChinh()
         {
-
         }
-
         public DonViHanhChinh(string maDonViHanhChinh, string tenDonViHanhChinh, int capDonVi)
         {
             this.maDonViHanhChinh = maDonViHanhChinh;
             this.tenDonViHanhChinh = tenDonViHanhChinh;
             this.capDonVi = capDonVi;
         }
-
         public DonViHanhChinh(string maDonViHanhChinh, string tenDonViHanhChinh, int capDonVi, DonViHanhChinh capTren) 
             : this(maDonViHanhChinh, tenDonViHanhChinh, capDonVi)
         {
             this.capTren = capTren;
         }
-
         [Display(Name = "Mã ĐVHC")]
         public string MaDonViHanhChinh { get => maDonViHanhChinh; set => Set(ref maDonViHanhChinh, value); }
         [Display(Name = "Tên ĐVHC")]
@@ -35,6 +31,21 @@ namespace Horizon.Models
         [Display(Name = "Cấp")]
         public int CapDonVi { get => capDonVi; set => Set(ref capDonVi, value); }
         [Display(Name = "Cấp Trên")]
-        public DonViHanhChinh CapTren { get => capTren; set => Set(ref capTren, value); }
+        public virtual DonViHanhChinh CapTren { get => capTren; set => Set(ref capTren, value); }
+
+        public static string DiaChi(DonViHanhChinh tinh,DonViHanhChinh  huyen, DonViHanhChinh xa,string sonha)
+        {
+            string diachi = string.Empty; ;
+            if (tinh == null) return diachi;
+            diachi = tinh.TenDonViHanhChinh;
+            if (huyen == null) return diachi;
+            diachi = huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            if (xa == null) return diachi;
+            diachi =xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            if (string.IsNullOrEmpty(sonha) || string.IsNullOrWhiteSpace(sonha)) return diachi;
+
+            return diachi =sonha+", "+  xa.TenDonViHanhChinh + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+
+        }
     }
 }
