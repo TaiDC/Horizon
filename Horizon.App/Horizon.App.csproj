@@ -168,6 +168,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TheoDoiDonHangView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TheoDoiDonHangView.Designer.cs">
+      <DependentUpon>TheoDoiDonHangView.cs</DependentUpon>
+    </Compile>
     <Compile Include="TimKiemView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TheoDoiDonHangView.resx">
+      <DependentUpon>TheoDoiDonHangView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TimKiemView.resx">
       <DependentUpon>TimKiemView.cs</DependentUpon>
     </EmbeddedResource>

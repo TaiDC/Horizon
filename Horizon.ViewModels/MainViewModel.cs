@@ -38,7 +38,9 @@ namespace Horizon.ViewModels
             && hdct.HoaDon.NgayHoaDon >= tungay && hdct.HoaDon.NgayHoaDon <= denngay);
             XtraReport report = XtraReport.FromFile(@"Report\BC_002_TheKho.repx", true);
             var rb= report.Band.Controls[1].Controls["crosstab"] as XRCrossTab ;
+            var rb2= report.Band.Controls[1].Controls["crosstab1"] as XRCrossTab;
             rb.DataSource = query;
+            rb2.DataSource = query;
             // Show the report's Print Preview.
             ReportPrintTool printTool = new ReportPrintTool(report);
             printTool.PreviewForm.WindowState = FormWindowState.Maximized;

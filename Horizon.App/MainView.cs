@@ -65,6 +65,7 @@ namespace Horizon.App
             };
             barButtonBarcode.ItemClick += delegate { ShowUserControl(barButtonBarcode.Caption, typeof(BarcodeView)); };
             barButtonHome.ItemClick += delegate { };
+            barButtonTheoDoiDonHang.ItemClick += delegate { ShowUserControl(barButtonTheoDoiDonHang.Caption, typeof(TheoDoiDonHangView)); };
             #endregion
 
 

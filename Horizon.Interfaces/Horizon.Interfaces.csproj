@@ -71,6 +71,7 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="ViewModels\INhaCungCapViewModel.cs" />
     <Compile Include="ViewModels\INhanVienViewModel.cs" />
+    <Compile Include="ViewModels\ITheoDoiDonHangViewModel.cs" />
     <Compile Include="Views\ITimKiemView.cs" />
   </ItemGroup>
   <ItemGroup>

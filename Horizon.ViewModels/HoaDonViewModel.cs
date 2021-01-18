@@ -58,7 +58,7 @@ namespace Horizon.ViewModels
             var obj = BindingSource.Current as HoaDon;
             if (obj == null) return false;
             if (obj.DaChuyen == false) return false;
-            return !obj.HoanTraHoaDon;
+            return !obj.HoanTraHoaDon && !obj.HuyHoaDon;
         }
         private void RefundExcute()
         {
@@ -82,7 +82,7 @@ namespace Horizon.ViewModels
             var obj = BindingSource.Current as HoaDon;
             if (obj == null) return false;
             if (obj.DaThanhToan == false) return false;
-            return !obj.HuyHoaDon;
+            return !obj.HuyHoaDon && !obj.HoanTraHoaDon;
         }
         private void CancelExcute()
         {

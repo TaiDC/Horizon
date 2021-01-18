@@ -29,6 +29,7 @@ namespace Horizon.App
             Container.RegisterType<Interfaces.ViewModels.IHoaDonViewModel, HoaDonViewModel>();
             Container.RegisterType<Interfaces.ViewModels.IKhachHangViewModel, KhachHangViewModel>();
             Container.RegisterType<Interfaces.ViewModels.IBarcodeViewModel, BarcodeViewModel>();
+            Container.RegisterType<Interfaces.ViewModels.ITheoDoiDonHangViewModel, TheoDoiDonHangViewModel>();
 
 
 
