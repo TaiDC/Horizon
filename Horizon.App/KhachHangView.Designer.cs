@@ -57,15 +57,15 @@
             this.SoNhaTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemForTinh = new DevExpress.XtraLayout.LayoutControlItem();
             this.TinhLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.donViHanhChinhTinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ItemForHuyen = new DevExpress.XtraLayout.LayoutControlItem();
             this.HuyenLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.donViHanhChinhHuyenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ItemForXa = new DevExpress.XtraLayout.LayoutControlItem();
             this.XaLookUpEdit = new DevExpress.XtraEditors.LookUpEdit();
+            this.donViHanhChinhXaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ItemForDiaChi = new DevExpress.XtraLayout.LayoutControlItem();
             this.DiaChiTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.donViHanhChinhTinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.donViHanhChinhHuyenBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.donViHanhChinhXaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControlMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutDetail)).BeginInit();
@@ -96,15 +96,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoNhaTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTinh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TinhLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhTinhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHuyen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HuyenLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhHuyenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForXa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XaLookUpEdit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhXaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiaChi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhTinhBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhHuyenBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhXaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbonControlMenu
@@ -426,7 +426,7 @@
             this.ItemForSoNha.Location = new System.Drawing.Point(0, 96);
             this.ItemForSoNha.Name = "ItemForSoNha";
             this.ItemForSoNha.Size = new System.Drawing.Size(280, 24);
-            this.ItemForSoNha.Text = "So Nha";
+            this.ItemForSoNha.Text = "Số Nhà";
             this.ItemForSoNha.TextSize = new System.Drawing.Size(110, 13);
             // 
             // SoNhaTextEdit
@@ -445,7 +445,7 @@
             this.ItemForTinh.Location = new System.Drawing.Point(0, 120);
             this.ItemForTinh.Name = "ItemForTinh";
             this.ItemForTinh.Size = new System.Drawing.Size(280, 24);
-            this.ItemForTinh.Text = "Tinh";
+            this.ItemForTinh.Text = "Tỉnh";
             this.ItemForTinh.TextSize = new System.Drawing.Size(110, 13);
             // 
             // TinhLookUpEdit
@@ -456,6 +456,8 @@
             this.TinhLookUpEdit.Name = "TinhLookUpEdit";
             this.TinhLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.TinhLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenDonViHanhChinh", "Tên ĐVHC", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.TinhLookUpEdit.Properties.DataSource = this.donViHanhChinhTinhBindingSource;
             this.TinhLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.TinhLookUpEdit.Properties.NullText = "";
@@ -464,13 +466,17 @@
             this.TinhLookUpEdit.StyleController = this.dataLayoutDetail;
             this.TinhLookUpEdit.TabIndex = 17;
             // 
+            // donViHanhChinhTinhBindingSource
+            // 
+            this.donViHanhChinhTinhBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
+            // 
             // ItemForHuyen
             // 
             this.ItemForHuyen.Control = this.HuyenLookUpEdit;
             this.ItemForHuyen.Location = new System.Drawing.Point(0, 144);
             this.ItemForHuyen.Name = "ItemForHuyen";
             this.ItemForHuyen.Size = new System.Drawing.Size(280, 24);
-            this.ItemForHuyen.Text = "Huyen";
+            this.ItemForHuyen.Text = "Huyện";
             this.ItemForHuyen.TextSize = new System.Drawing.Size(110, 13);
             // 
             // HuyenLookUpEdit
@@ -481,6 +487,8 @@
             this.HuyenLookUpEdit.Name = "HuyenLookUpEdit";
             this.HuyenLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.HuyenLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenDonViHanhChinh", "Tên ĐVHC", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.HuyenLookUpEdit.Properties.DataSource = this.donViHanhChinhHuyenBindingSource;
             this.HuyenLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.HuyenLookUpEdit.Properties.NullText = "";
@@ -488,13 +496,17 @@
             this.HuyenLookUpEdit.StyleController = this.dataLayoutDetail;
             this.HuyenLookUpEdit.TabIndex = 18;
             // 
+            // donViHanhChinhHuyenBindingSource
+            // 
+            this.donViHanhChinhHuyenBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
+            // 
             // ItemForXa
             // 
             this.ItemForXa.Control = this.XaLookUpEdit;
             this.ItemForXa.Location = new System.Drawing.Point(0, 168);
             this.ItemForXa.Name = "ItemForXa";
             this.ItemForXa.Size = new System.Drawing.Size(280, 24);
-            this.ItemForXa.Text = "Xa";
+            this.ItemForXa.Text = "Xã";
             this.ItemForXa.TextSize = new System.Drawing.Size(110, 13);
             // 
             // XaLookUpEdit
@@ -505,13 +517,18 @@
             this.XaLookUpEdit.Name = "XaLookUpEdit";
             this.XaLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.XaLookUpEdit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("TenDonViHanhChinh", "Tên ĐVHC", 59, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.XaLookUpEdit.Properties.DataSource = this.donViHanhChinhXaBindingSource;
-            this.XaLookUpEdit.Properties.DisplayMember = "MaDonViHanhChinh";
+            this.XaLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.XaLookUpEdit.Properties.NullText = "";
-            this.XaLookUpEdit.Properties.ValueMember = "Id";
             this.XaLookUpEdit.Size = new System.Drawing.Size(154, 20);
             this.XaLookUpEdit.StyleController = this.dataLayoutDetail;
             this.XaLookUpEdit.TabIndex = 19;
+            // 
+            // donViHanhChinhXaBindingSource
+            // 
+            this.donViHanhChinhXaBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
             // 
             // ItemForDiaChi
             // 
@@ -530,18 +547,6 @@
             this.DiaChiTextEdit.Size = new System.Drawing.Size(154, 20);
             this.DiaChiTextEdit.StyleController = this.dataLayoutDetail;
             this.DiaChiTextEdit.TabIndex = 8;
-            // 
-            // donViHanhChinhTinhBindingSource
-            // 
-            this.donViHanhChinhTinhBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
-            // 
-            // donViHanhChinhHuyenBindingSource
-            // 
-            this.donViHanhChinhHuyenBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
-            // 
-            // donViHanhChinhXaBindingSource
-            // 
-            this.donViHanhChinhXaBindingSource.DataSource = typeof(Horizon.Models.DonViHanhChinh);
             // 
             // KhachHangView
             // 
@@ -579,15 +584,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.SoNhaTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForTinh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TinhLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhTinhBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForHuyen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HuyenLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhHuyenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForXa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XaLookUpEdit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhXaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForDiaChi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DiaChiTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhTinhBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhHuyenBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.donViHanhChinhXaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,6 +16,10 @@ namespace Horizon.Models
         private string soTaiKhoan;
         private string ghiChu;
         private string email;
+        private string soNha;
+        private DonViHanhChinh tinh;
+        private DonViHanhChinh huyen;
+        private DonViHanhChinh xa;
 
         [Display(Name = "Mã Khách Hàng")]
         public string MaKhachHang { get => maKhachHang; set => Set(ref maKhachHang, value); }
@@ -25,16 +29,16 @@ namespace Horizon.Models
         public DateTime NgaySinh { get => ngaySinh; set => Set(ref ngaySinh, value); }
         [Display(Name = "Giới Tính")]
         public string GioiTinh { get => gioiTinh; set => Set(ref gioiTinh, value); }
-
-        public string SoNha { get; set; }
-        public DonViHanhChinh Tinh { get; set; }
-        public DonViHanhChinh Huyen { get; set; }
-        public DonViHanhChinh Xa { get; set; }
-
-
-
+        [Display(Name = "Số Nhà")]
+        public string SoNha { get => soNha; set => Set(ref soNha, value); }
+        [Display(Name = "Tỉnh")]
+        public DonViHanhChinh Tinh { get => tinh; set => Set(ref tinh, value); }
+        [Display(Name = "Huyện")]
+        public DonViHanhChinh Huyen { get => huyen; set => Set(ref huyen, value); }
+        [Display(Name = "Xã")]
+        public DonViHanhChinh Xa { get => xa; set => Set(ref xa, value); }
         [Display(Name = "Địa Chỉ")]
-        public string DiaChi { get => DonViHanhChinh.DiaChi(Tinh,Huyen,Xa,SoNha); set => Set(ref diaChi, value); }
+        public string DiaChi { get => DonViHanhChinh.DiaChi(Tinh, Huyen, Xa, SoNha); set => Set(ref diaChi, value); }
         [Display(Name = "Điện Thoại")]
         public string DienThoai { get => dienThoai; set => Set(ref dienThoai, value); }
         [Display(Name = "Email")]

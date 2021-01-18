@@ -23,11 +23,33 @@ namespace Horizon.ViewModels
         {
             BindingSource.DataSource = UnitOfWork.KhachHang.GetList();
             TinhBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(t => t.CapDonVi == 1);
-            HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == 1);
+            HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapDonVi == 2);
+            XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapDonVi == 3);
+            BindingSource.CurrentChanged += delegate
+            {
+                var obj = BindingSource.Current as KhachHang;
+                HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == obj.Tinh.Id);
+                XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapTren.Id == obj.Xa.Id);
+            };
+            TinhBindingSource.CurrentChanged += delegate
+            {
+                DonViHanhChinh tinh = TinhBindingSource.Current as DonViHanhChinh;
+                HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == tinh.Id);
+                var obj = BindingSource.Current as KhachHang;
+                obj.Huyen = null;
+            };
+            HuyenBindingSource.CurrentItemChanged += delegate
+            {
+                DonViHanhChinh huyen = HuyenBindingSource.Current as DonViHanhChinh;
+                XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapTren.Id == huyen.Id);
+                var obj = BindingSource.Current as KhachHang;
+                obj.Xa = null;
+            };
         }
         public override bool Add()
         {
             var obj = BindingSource.AddNew() as KhachHang;
+            obj.NgaySinh = DateTime.Today;
             return base.Add();
         }
         public override bool Edit()
@@ -50,6 +72,7 @@ namespace Horizon.ViewModels
         public override bool Save()
         {
             var obj = BindingSource.Current as KhachHang;
+            obj.MaKhachHang = UnitOfWork.KhachHang.InitializationCodeByYear(DateTime.Now);
             if (obj.Id == 0)
                 UnitOfWork.KhachHang.Add(obj);
             else

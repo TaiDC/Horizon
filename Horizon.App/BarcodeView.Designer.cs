@@ -33,17 +33,17 @@
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.barButtonPrint = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonView = new DevExpress.XtraBars.BarButtonItem();
+            this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMaSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colLoaiSanPham = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDonGiaNhap = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.btnClose = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -81,6 +81,13 @@
             this.barButtonView.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonView.ImageOptions.SvgImage")));
             this.barButtonView.Name = "barButtonView";
             // 
+            // btnClose
+            // 
+            this.btnClose.Caption = "Đóng";
+            this.btnClose.Id = 3;
+            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnClose.ImageOptions.SvgImage")));
+            this.btnClose.Name = "btnClose";
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -102,6 +109,11 @@
             this.ribbonPageGroup1.ItemLinks.Add(this.barButtonView);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "Print";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnClose);
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             // 
             // bindingSource
             // 
@@ -126,6 +138,8 @@
             this.colLoaiSanPham,
             this.colDonGiaNhap});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "LoaiSanPham.TenLoaiSanPham", null, "(Tên Loại SP: Count={0})")});
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsSelection.MultiSelect = true;
             this.gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
@@ -163,18 +177,6 @@
             this.colDonGiaNhap.Visible = true;
             this.colDonGiaNhap.VisibleIndex = 3;
             this.colDonGiaNhap.Width = 100;
-            // 
-            // ribbonPageGroup2
-            // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnClose);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
-            // 
-            // btnClose
-            // 
-            this.btnClose.Caption = "Đóng";
-            this.btnClose.Id = 3;
-            this.btnClose.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.btnClose.Name = "btnClose";
             // 
             // BarcodeView
             // 

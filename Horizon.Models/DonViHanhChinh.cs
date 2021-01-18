@@ -37,15 +37,12 @@ namespace Horizon.Models
         {
             string diachi = string.Empty; ;
             if (tinh == null) return diachi;
-            diachi = tinh.TenDonViHanhChinh;
+            diachi =sonha+ ", "+ tinh.TenDonViHanhChinh;
             if (huyen == null) return diachi;
-            diachi = huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            diachi = sonha + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
             if (xa == null) return diachi;
-            diachi =xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
-            if (string.IsNullOrEmpty(sonha) || string.IsNullOrWhiteSpace(sonha)) return diachi;
-
-            return diachi =sonha+", "+  xa.TenDonViHanhChinh + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
-
+            diachi = sonha + ", " + xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            return diachi;
         }
     }
 }

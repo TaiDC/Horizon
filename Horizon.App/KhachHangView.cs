@@ -49,7 +49,9 @@ namespace Horizon.App
 
             #endregion
 
-            TinhLookUpEdit.EditValueChanged += delegate { bindingSource.Position = TinhLookUpEdit.ItemIndex; };
+            TinhLookUpEdit.EditValueChanged += delegate { donViHanhChinhTinhBindingSource.Position = TinhLookUpEdit.ItemIndex; };
+            HuyenLookUpEdit.EditValueChanged += delegate { donViHanhChinhHuyenBindingSource.Position = HuyenLookUpEdit.ItemIndex; };
+
 
         }
     }
