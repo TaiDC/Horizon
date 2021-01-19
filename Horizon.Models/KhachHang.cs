@@ -32,13 +32,13 @@ namespace Horizon.Models
         [Display(Name = "Số Nhà")]
         public string SoNha { get => soNha; set => Set(ref soNha, value); }
         [Display(Name = "Tỉnh")]
-        public DonViHanhChinh Tinh { get => tinh; set => Set(ref tinh, value); }
+        public virtual DonViHanhChinh Tinh { get => tinh; set => Set(ref tinh, value); }
         [Display(Name = "Huyện")]
-        public DonViHanhChinh Huyen { get => huyen; set => Set(ref huyen, value); }
+        public virtual DonViHanhChinh Huyen { get => huyen; set => Set(ref huyen, value); }
         [Display(Name = "Xã")]
-        public DonViHanhChinh Xa { get => xa; set => Set(ref xa, value); }
+        public virtual DonViHanhChinh Xa { get => xa; set => Set(ref xa, value); }
         [Display(Name = "Địa Chỉ")]
-        public string DiaChi { get => DonViHanhChinh.DiaChi(Tinh, Huyen, Xa, SoNha); set => Set(ref diaChi, value); }
+        public string DiaChi { get => diaChi /*DonViHanhChinh.DiaChi(Tinh, Huyen, Xa, SoNha)*/; set => Set(ref diaChi, value); }
         [Display(Name = "Điện Thoại")]
         public string DienThoai { get => dienThoai; set => Set(ref dienThoai, value); }
         [Display(Name = "Email")]

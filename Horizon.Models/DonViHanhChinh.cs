@@ -35,14 +35,16 @@ namespace Horizon.Models
 
         public static string DiaChi(DonViHanhChinh tinh,DonViHanhChinh  huyen, DonViHanhChinh xa,string sonha)
         {
-            string diachi = string.Empty; ;
+            string diachi = string.Empty;
             if (tinh == null) return diachi;
-            diachi =sonha+ ", "+ tinh.TenDonViHanhChinh;
+                diachi =tinh.TenDonViHanhChinh;
             if (huyen == null) return diachi;
-            diachi = sonha + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+                diachi =huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
             if (xa == null) return diachi;
-            diachi = sonha + ", " + xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
-            return diachi;
+                diachi =xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            if (string.IsNullOrEmpty(sonha) || string.IsNullOrWhiteSpace(sonha)) return diachi;
+            return diachi = sonha + ", " + xa.TenDonViHanhChinh + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+
         }
     }
 }

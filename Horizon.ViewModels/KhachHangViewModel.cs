@@ -25,25 +25,20 @@ namespace Horizon.ViewModels
             TinhBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(t => t.CapDonVi == 1);
             HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapDonVi == 2);
             XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapDonVi == 3);
-            BindingSource.CurrentChanged += delegate
-            {
-                var obj = BindingSource.Current as KhachHang;
-                HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == obj.Tinh.Id);
-                XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapTren.Id == obj.Xa.Id);
-            };
+
             TinhBindingSource.CurrentChanged += delegate
             {
                 DonViHanhChinh tinh = TinhBindingSource.Current as DonViHanhChinh;
                 HuyenBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(h => h.CapTren.Id == tinh.Id);
                 var obj = BindingSource.Current as KhachHang;
-                obj.Huyen = null;
+                //obj.Huyen = null;
             };
-            HuyenBindingSource.CurrentItemChanged += delegate
+            HuyenBindingSource.CurrentChanged += delegate
             {
                 DonViHanhChinh huyen = HuyenBindingSource.Current as DonViHanhChinh;
                 XaBindingSource.DataSource = UnitOfWork.DonViHanhChinh.GetList(x => x.CapTren.Id == huyen.Id);
                 var obj = BindingSource.Current as KhachHang;
-                obj.Xa = null;
+                //obj.Xa = null;
             };
         }
         public override bool Add()
