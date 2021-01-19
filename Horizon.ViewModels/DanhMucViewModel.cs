@@ -49,6 +49,7 @@ namespace Horizon.ViewModels
         }
         public override bool Trash()
         {
+            UnitOfWork.DanhMuc.Reset();
             return base.Trash();
         }
     }

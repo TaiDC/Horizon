@@ -50,6 +50,7 @@ namespace Horizon.ViewModels
         }
         public override bool Trash()
         {    
+            UnitOfWork.NhanVien.Reset();
             return base.Trash();
         }
     }

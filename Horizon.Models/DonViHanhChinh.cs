@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Horizon.Models
 {
@@ -36,14 +37,12 @@ namespace Horizon.Models
         public static string DiaChi(DonViHanhChinh tinh,DonViHanhChinh  huyen, DonViHanhChinh xa,string sonha)
         {
             string diachi = string.Empty;
-            if (tinh == null) return diachi;
-                diachi =tinh.TenDonViHanhChinh;
-            if (huyen == null) return diachi;
-                diachi =huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
-            if (xa == null) return diachi;
-                diachi =xa.TenDonViHanhChinh +", "+ huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
-            if (string.IsNullOrEmpty(sonha) || string.IsNullOrWhiteSpace(sonha)) return diachi;
-            return diachi = sonha + ", " + xa.TenDonViHanhChinh + ", " + huyen.TenDonViHanhChinh + ", " + tinh.TenDonViHanhChinh;
+            string[] strs = new string[] { sonha, xa == null ? null : xa.TenDonViHanhChinh, huyen == null ? null : huyen.TenDonViHanhChinh, tinh == null ? null : tinh.TenDonViHanhChinh };
+
+            diachi = string.Join(", ", strs.Where(s => !string.IsNullOrEmpty(s)));
+
+
+            return diachi;
 
         }
     }

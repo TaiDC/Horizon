@@ -80,6 +80,7 @@ namespace Horizon.ViewModels
         }
         public override bool Trash()
         {
+            UnitOfWork.KhachHang.Reset();
             return base.Trash();
         }
     }

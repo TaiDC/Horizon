@@ -461,7 +461,7 @@
             this.TinhLookUpEdit.Properties.DataSource = this.donViHanhChinhTinhBindingSource;
             this.TinhLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.TinhLookUpEdit.Properties.NullText = "";
-            this.TinhLookUpEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.TinhLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
             this.TinhLookUpEdit.Size = new System.Drawing.Size(154, 20);
             this.TinhLookUpEdit.StyleController = this.dataLayoutDetail;
             this.TinhLookUpEdit.TabIndex = 17;
@@ -492,6 +492,7 @@
             this.HuyenLookUpEdit.Properties.DataSource = this.donViHanhChinhHuyenBindingSource;
             this.HuyenLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.HuyenLookUpEdit.Properties.NullText = "";
+            this.HuyenLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
             this.HuyenLookUpEdit.Size = new System.Drawing.Size(154, 20);
             this.HuyenLookUpEdit.StyleController = this.dataLayoutDetail;
             this.HuyenLookUpEdit.TabIndex = 18;
@@ -522,6 +523,7 @@
             this.XaLookUpEdit.Properties.DataSource = this.donViHanhChinhXaBindingSource;
             this.XaLookUpEdit.Properties.DisplayMember = "TenDonViHanhChinh";
             this.XaLookUpEdit.Properties.NullText = "";
+            this.XaLookUpEdit.Properties.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoSuggest;
             this.XaLookUpEdit.Size = new System.Drawing.Size(154, 20);
             this.XaLookUpEdit.StyleController = this.dataLayoutDetail;
             this.XaLookUpEdit.TabIndex = 19;

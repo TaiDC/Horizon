@@ -54,6 +54,7 @@ namespace Horizon.ViewModels
         }
         public override bool Trash()
         {
+            UnitOfWork.NhaCungCap.Reset();
             return base.Trash();
         }
     }

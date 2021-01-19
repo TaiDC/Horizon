@@ -49,6 +49,7 @@ namespace Horizon.ViewModels
         }
         public override bool Trash()
         {
+            UnitOfWork.LoaiSanPham.Reset();
             return base.Trash();
         }
     }

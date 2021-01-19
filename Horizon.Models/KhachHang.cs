@@ -38,10 +38,10 @@ namespace Horizon.Models
         [Display(Name = "Xã")]
         public virtual DonViHanhChinh Xa { get => xa; set => Set(ref xa, value); }
         [Display(Name = "Địa Chỉ")]
-        public string DiaChi { get => diaChi /*DonViHanhChinh.DiaChi(Tinh, Huyen, Xa, SoNha)*/; set => Set(ref diaChi, value); }
+        public string DiaChi { get => DonViHanhChinh.DiaChi(Tinh, Huyen, Xa, SoNha); set => Set(ref diaChi, value); }
         [Display(Name = "Điện Thoại")]
         public string DienThoai { get => dienThoai; set => Set(ref dienThoai, value); }
-        [Display(Name = "Email")]
+        [Display(Name = "Email") , EmailAddress()]
         public string Email { get => email; set => Set(ref email, value); }
         [Display(Name = "Số Tài Khoản")]
         public string SoTaiKhoan { get => soTaiKhoan; set => Set(ref soTaiKhoan, value); }
